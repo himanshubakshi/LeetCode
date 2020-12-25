@@ -53,7 +53,7 @@ class Solution {
                 carry = 1
             } else {
                 nodeVal = nodeValSum
-                carry = null
+                carry = 0
             }
 
             if (resultNode == null) {
@@ -72,9 +72,9 @@ class Solution {
     }
 }
 
+// Does not work for really long numbers
 class Solution1 {
 
-    // Does not work for really long numbers
     fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
         var total = listSum(l1) + listSum(l2)
 
@@ -113,9 +113,9 @@ class Solution1 {
 
 fun main() {
     val l1 = ListNode(9).apply {
-//        next = ListNode(2).apply {
-//            next = ListNode(3)
-//        }
+        next = ListNode(2).apply {
+            next = ListNode(3)
+        }
     }
     val l2 = ListNode(1).apply {
         next = ListNode(9).apply {
